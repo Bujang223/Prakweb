@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daftar Menu</title>
+    <link rel="stylesheet" href="eksternal.css" type="text/css">
+    <script src="pesanan.js" defer></script> <!-- Menambahkan file JS eksternal -->
+  </head>
+  <body>
+    <div class="header">
+        <h1>Daftar Menu Restoran Asrafil Ambia</h1>
+        <img src="D:\Perkuliahan S3\logo1.png" width="200px" alt="Logo Restoran" class="logo">
+        <nav>
+            <a href="about.html">ABOUT</a>
+            <a href="tabel sederhana.html">MENU</a>
+        </nav>
+    </div>
+
+    <table>
+        <tr>
+            <th>NO</th>
+            <th>Nama Makanan</th>
+            <th>Harga</th>
+            <th>Tautan</th>
+            <th>Gambar</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Nasi Goreng</td>
+            <td>Rp15.000</td>
+            <td><a href="https://www.liputan6.com/hot/read/4478109/10-cara-membuat-nasi-goreng-yang-enak-dan-mudah-dipraktikkan">Info Selengkapnya</a></td>
+            <td><img src="https://cdn1-production-images-kly.akamaized.net/C84FgHuetKDIc1agT4IPljynG3k=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3108566/original/079979700_1587487794-Sajiku_1.jpg" alt="Nasi goreng" width="100px"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Sate Ayam</td>
+            <td>Rp25.000</td>
+            <td><a href="https://www.kompas.com/food/read/2020/12/31/164754075/resep-sate-ayam-madura-lengkap-dengan-bumbu-kacang-dan-sambal">Info Selengkapnya</a></td>
+            <td><img src="https://asset.kompas.com/crops/k63C9iYLE9ArywzMWvYJiLxfRSE=/0x0:1000x667/750x500/data/photo/2020/12/31/5fed9cd7eb798.jpg" alt="Sate Ayam" width="100"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Rendang</td>
+            <td>Rp30.000</td>
+            <td><a href="https://www.kompas.com/food/read/2023/03/25/150500475/resep-rendang-minang-masakan-minang-populer-untuk-lebaran">Info Selengkapnya</a></td>
+            <td><img src="https://asset.kompas.com/crops/AWXtnkYHOrbSxSggVuTs3EzQprM=/10x36:890x623/750x500/data/photo/2023/03/25/641e5ef63dea4.jpg" alt="Rendang" width="100"></td>
+        </tr>
+    </table>
+
+    <!-- Form Pesanan -->
+    <h2>Pesanan Anda</h2>
+    <form id="formPesanan">
+        <input type="checkbox" id="nasiGoreng" name="makanan" value="Nasi Goreng">
+        <label for="nasiGoreng">Nasi Goreng - Rp15.000</label><br>
+
+        <input type="checkbox" id="sateAyam" name="makanan" value="Sate Ayam">
+        <label for="sateAyam">Sate Ayam - Rp25.000</label><br>
+
+        <input type="checkbox" id="rendang" name="makanan" value="Rendang">
+        <label for="rendang">Rendang - Rp30.000</label><br>
+
+        <button type="button" onclick="akhiriPesanan()">Akhiri Pesanan</button>
+    </form>
+
+    <footer>
+        @Copyright Asrafil Ambia 2024
+    </footer>
+  </body>
+</html>
