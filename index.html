@@ -4,68 +4,8 @@
     <title>Asrafil Ambia</title>
   </head>
   <body>
-      <script language="JavaScript" src="isi.js"></script>
-    <p>
-  <script language="JavaScript">
-      function namaAnda() {
-      let nama = prompt("Masukkan Nama Anda");
-        if (nama != null) {
-          alert("Halo " + nama + " cantik");
-      }
-      }
-  </script>
-
-    <form name="Penghitungan">
-    <h1>Memasukkan data lewat prompt</h1>
-
-    <input type="button" value="Masukkan Nama" onclick="namaAnda()"/>
-    </form>
-    </p>
-    
-    <p>
       <script language="JavaScript">
-        document.writeln("<pre>");
-        document.writeln("<h1>Operasi Matematika Dasar</h1>");
-        let A = "100";
-        let B = "200";
-        let C = 300;
-        let D = 400;
-        let E = A + B;
-        document.writeln('"100" + "200" = ' + E);
-        E = B + C;
-        document.writeln('"200" + 300 = ' + E);
-        E = C + D;
-        document.writeln('300 + 400 = ' + E);
-        document.writeln("<pre>");
+        document.write("Belajar Pemrograman JavaScript");
       </script>
-    </p>
-
-    <p>
-      <script language="JavaScript">
-
-      function jumlah()
-        {
-          var bil1 = parseFloat(document.Penghitung.bilangan1.value);
-          if (isNaN (bil1))
-          bil1=0.0;
-          var bil2 = parseFloat(document.Penghitung.bilangan2.value);
-          if (isNaN (bil2))
-          bil2=0.0;
-          var hasil = bil1 + bil2;
-          console.log("hasil Penjumlahan = " + hasil);
-        }
-      </script>
-
-      <form name="Penghitung">
-        <h1>Massukan data via form</h1>
-
-        <pre>
-          Bilangan Pertama :<input type="text" size="11" name="bilangan1"/>
-          Bilangan Kedua   :<input type="text" size="11" name="bilangan2"/>
-        </pre>
-
-        <input type="button" value="Jumlahkan" onclick="jumlah()"/>
-      </form>
-    </p>
   </body>
 </html>
