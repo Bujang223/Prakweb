@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resep Pancake Sederhana</title>
+    <style>
+        body {
+            font-family: Georgia, sans-serif;
+        }
+
+        h1 {
+            background-color: chocolate; 
+            color: white;
+            border-style: solid;
+            border-radius: 10px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h3 {
+            color: #2e8b57; 
+        }
+
+        li {
+            font-size: 25px;
+        }
+
+        ol {
+            color: green;
+            text-padding: 10px;
+            border-radius: 8px;
+            font-size: 20px;
+        }
+
+        .bahan {
+            background-color: lightyellow;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .cara-membuat {
+            background-color: lightgreen;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        footer {
+            color: black;
+            text-align: left;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .button-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: chocolate;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="judulResep">Resep Pancake</h1>
+    </header>
+
+    <h2>Bahan-bahan:</h2>
+    <div class="bahan">
+        <ul>
+            <li>1 cangkir tepung terigu</li>
+            <img src="https://media.istockphoto.com/id/1216660053/id/foto/setengah-cangkir-tepung-terigu.jpg?s=612x612&w=0&k=20&c=XInKRfznhwVMgPh1GotgECuSF47wyPl-i5TRdYsrDlg=" width="100px" height="80px">
+            <li>2 sendok makan gula pasir</li>
+            <img src="https://cdn0-production-images-kly.akamaized.net/yfzDGxV2Js_8JkPICUOa7t-8mlY=/1200x900/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/1498499/original/019958400_1486368597-Gula2.jpg" width="100px" height="80px">
+            <li>1 sendok teh baking powder</li>
+            <img src="https://media.istockphoto.com/id/483198376/id/foto/tampilan-overhead-sendok-teh-baking-powder-soda-tepung-terukur.jpg?s=612x612&w=0&k=20&c=VoP2J-MzG-RWhfUIS35AM0-YwFU3NtoP41uwTEEvfco=" width="100px" height="80px">
+            <li>1 butir telur</li>
+            <img src="https://id-test-11.slatic.net/p/15a3b10e881397635b17fd9d4b1aea32.jpg" width="100px" height="80px">
+            <li>1 cangkir susu</li>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJZ2antOJQ9DZkV-KuymYRsGtcmNPGCDR-Zg&s" width="100px" height="80px">
+            <li>2 sendok makan mentega, lelehkan</li>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8hHfFvup4PBTH71q5pqrSetXz9H-8FhLkKg&sg" width="100px" height="80px">
+        </ul>
+    </div>
+
+    <h2>Cara Membuat:</h2>
+    <div class="cara-membuat">
+        <ol>
+            <li>Campurkan tepung terigu, gula, dan baking powder dalam sebuah wadah.</li>
+            <li>Dalam wadah terpisah, kocok telur dan campurkan dengan susu serta mentega yang telah dilelehkan.</li>
+            <li>Tuangkan campuran telur ke dalam campuran tepung, aduk hingga semua bahan tercampur rata.</li>
+            <li>Panaskan sedikit mentega dalam wajan anti lengket di atas api sedang.</li>
+            <li>Tuang adonan pancake ke dalam wajan, masak hingga muncul gelembung di permukaan pancake.</li>
+            <li>Balik pancake dan masak hingga kedua sisinya berwarna kecoklatan.</li>
+            <li>Sajikan pancake selagi hangat dengan sirup maple atau topping sesuai selera.</li>
+        </ol>
+    </div>
+
+    <div class="button-container">
+        <button onclick="cekResep()">Cek Resep</button>
+        <button onclick="cetakResep()">Cetak Resep</button>
+    </div>
+
+    <script>
+        function cekResep() {
+            var judulResep = document.getElementById("judulResep").innerText;
+            console.log("Nama Resep: " + judulResep);
+        }
+
+        function cetakResep() {
+            window.print();
+        }
+    </script>
+    <footer>
+        @Copyright Asrafil Ambia 2024
+    </footer>
+</body>
+</html>
