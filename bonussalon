@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cek Bonus Salon</title>
+</head>
+
+<body>
+    <h1>Program Cek Bonus Kunjungan Salon</h1>
+    <p>Masukkan jumlah kunjungan yang sudah dilakukan oleh pelanggan:</p>
+    
+    <input type="number" id="jumlahKunjungan" placeholder="Masukkan jumlah kunjungan">
+    <button onclick="cekKunjungan()">Cek Bonus</button>
+
+    <p id="hasil"></p>
+
+    <script language="JavaScript">
+
+        function cekKunjungan() {
+            
+            const jumlahKunjungan = parseInt(document.getElementById("jumlahKunjungan").value);
+
+        
+            if (isNaN(jumlahKunjungan) || jumlahKunjungan < 0) {
+                document.getElementById("hasil").innerText = "Masukkan jumlah kunjungan yang valid.";
+                return;
+            }
+
+            
+            const kuponPerKunjungan = 1; 
+            let totalKupon = jumlahKunjungan * kuponPerKunjungan;
+
+    
+            const kunjunganUntukBonus = 10; 
+            let bonusGratis = Math.floor(jumlahKunjungan / kunjunganUntukBonus); 
+
+            
+            let hasil = `Total kunjungan: ${jumlahKunjungan}\n`;
+            hasil += `Banyak potongan kupon yang dimiliki: ${totalKupon}\n`;
+
+        
+            if (bonusGratis > 0) {
+                hasil += `Pelanggan sudah mendapatkan ${bonusGratis} kunjungan gratis.`;
+            } else {
+                let sisaKunjungan = kunjunganUntukBonus - (jumlahKunjungan % kunjunganUntukBonus);
+                hasil += `Pelanggan belum mendapatkan kunjungan gratis. Sisa ${sisaKunjungan} kunjungan lagi untuk bonus.`;
+            }
+
+            document.getElementById("hasil").innerText = hasil;
+        }
+    </script>
+</body>
+
+</html>
