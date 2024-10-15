@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Total Pembelian</title>
+</head>
+
+<body>
+
+    <label for="harga">Harga Barang (per unit): </label>
+    <input type="number" id="harga" placeholder="Masukkan harga barang"><br><br>
+
+    <label for="jumlah">Jumlah Barang yang Dibeli: </label>
+    <input type="number" id="jumlah" placeholder="Masukkan jumlah barang"><br><br>
+
+    <button onclick="hitungTotal()">Hitung Total Pembelian</button>
+
+    <h3>Hasil:</h3>
+    <p id="hasil"></p>
+
+    <script language="JavaScript">
+        
+        function hitungTotal() {
+            // Mengambil nilai dari input user
+            const hargaBarang = parseFloat(document.getElementById("harga").value);
+            const jumlahBarang = parseInt(document.getElementById("jumlah").value);
+
+            // Menghitung total harga sebelum diskon
+            const totalHarga = hargaBarang * jumlahBarang;
+
+            // Kondisi jika jumlah barang lebih dari 50, diskon 10%
+            let diskon = 0;
+            if (jumlahBarang > 50) {
+                diskon = totalHarga * 0.10; // Diskon 10%
+            }
+
+            // Menghitung harga setelah diskon
+            const hargaSetelahDiskon = totalHarga - diskon;
+
+            // Menampilkan hasil
+            const hasilText = `
+                Total Harga (Tanpa Diskon): Rp ${totalHarga.toFixed(2)}<br>
+                Diskon yang Diberikan: Rp ${diskon.toFixed(2)}<br>
+                Total Harga Setelah Diskon: Rp ${hargaSetelahDiskon.toFixed(2)}
+            `;
+            document.getElementById("hasil").innerHTML = hasilText;
+        }
+    </script>
+</body>
+
+</html>
