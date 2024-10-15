@@ -1,1 +1,32 @@
-h
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pengecekan Membership</title>
+</head>
+
+<body>
+    <p>
+        <script language="JavaScript">
+            
+            const pelanggan = [
+                { nama: "Lena", membership: true },
+                { nama: "Rio", membership: false }
+            ];
+
+            if (pelanggan[0].membership) {
+                console.log(pelanggan[1].nama + " mendapatkan diskon 5%");
+            } else {
+                console.log(pelanggan[0].nama + " tidak mendapatkan diskon");
+            }
+
+            if (pelanggan[1].membership) {
+                console.log(pelanggan[1].nama + " mendapatkan diskon 5%");
+            } else {
+                console.log(pelanggan[1].nama + " tidak mendapatkan diskon");
+            }
+        </script>
+    </p>
+</body>
+
+</html>
