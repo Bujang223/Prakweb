@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pengecekan Kelulusan Siswa</title>
+</head>
+
+<body>
+    <script language="JavaScript">
+        
+        const siswa = [
+            { nama: "Andi", nilai: { matematika: 70, biologi: 80, fisika: 70, kimia: 90 } },
+            { nama: "Ria", nilai: { matematika: 90, biologi: 65, fisika: 80, kimia: 70 } },
+            { nama: "Bima", nilai: { matematika: 100, biologi: 70, fisika: 95, kimia: 50 } },
+            { nama: "Toni", nilai: { matematika: 60, biologi: 60, fisika: 70, kimia: 60 } },
+            { nama: "Putri", nilai: { matematika: 70, biologi: 100, fisika: 80, kimia: 75 } }
+        ];
+
+        function cekKelulusanBerdasarkanNama(namaSiswa) {
+            let ditemukan = false;
+
+            for (let i = 0; i < siswa.length; i++) {
+                if (siswa[i].nama.toLowerCase() === namaSiswa.toLowerCase()) {
+                    ditemukan = true;
+                    let nilai = siswa[i].nilai;
+                    let lulus = nilai.matematika >= 60 && nilai.biologi >= 60 && nilai.fisika >= 60 && nilai.kimia >= 60;
+
+                    // Tampilkan status kelulusan
+                    if (lulus) {
+                        alert(siswa[i].nama + " Lulus");
+                    } else {
+                        alert(siswa[i].nama + " Tidak Lulus");
+                    }
+                    break;
+                }
+            }
+        }
+
+        let namaSiswa = prompt("Masukkan nama siswa yang ingin diperiksa status kelulusannya:");
+
+        cekKelulusanBerdasarkanNama(namaSiswa);
+    </script>
+</body>
+
+</html>
+
+
+</html>
